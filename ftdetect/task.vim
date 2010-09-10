@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead todo.txt,*.task	setfiletype task
+autocmd BufNewFile,BufRead todo.txt,*.task,*.tasks	setfiletype task
