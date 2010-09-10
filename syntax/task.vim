@@ -17,7 +17,7 @@ syntax match taskDoneItem "^\s*✓.*" contains=taskDoneIcon,taskKeyword
 highlight taskKeyword guifg=#96CBFE guibg=black gui=NONE ctermfg=blue ctermbg=black cterm=NONE
 
 highlight taskWorkingItem guifg=#f6f3e8 guibg=black gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-highlight taskDoneItem guifg=#A8FF60 guibg=black gui=NONE ctermfg=green ctermbg=black cterm=NONE
+highlight taskDoneItem guifg=#A8FF60 guibg=black gui=italic ctermfg=green ctermbg=black cterm=NONE
 
 highlight taskWorkingIcon guifg=#FF6C60 guibg=black gui=NONE ctermfg=red ctermbg=black cterm=NONE
 highlight taskDoneIcon guifg=#A8FF60 guibg=black gui=italic ctermfg=green ctermbg=black cterm=NONE
