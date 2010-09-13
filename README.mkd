@@ -1,0 +1,55 @@
+## Overview
+Basically, this is the [TextMate Tasks Bundle](http://henrik.nyh.se/2007/08/tasks-bundle "TextMate Tasks Bundle") port for Vim.
+
+## ScreenShot
+
+### Vim-Task with Monaco font
+<a href="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task.png"><img style="border: medium none;" title="Vim-Task with Monaco font" src="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task.png" alt="Vim-Task with Monaco font" width="300" height="216"></a>
+
+### Vim-Task with Consolas font (which support bold & italic)
+<a href="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task-consolas.png"><img style="border: medium none;" title="Vim-Task with Consolas font" src="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task-consolas.png" alt="Vim-Task with Consolas font" width="300" height="216"></a>
+
+## Installation
+Normal installation steps follow the vim tradition: download the zip/tar archive then copy all the directories/files to ~/.vim directory. You can download vim-task zip/tar archive by clicking the “Download Source” button in github.
+
+You can also check out the latest code if you have git installed:
+
+    $ git clone git://github.com/samsonw/vim-task.git
+    $ cd vim-task
+    $ rm README.mkd
+    $ cp -rv * ~/.vim
+
+For those guys who use [pathogen](http://github.com/tpope/vim-pathogen "pathogen"), the installation should be as simple as a git clone:
+    $ cd ~/.vim/bundle
+    $ git clone git://github.com/samsonw/vim-task.git
+
+unfortunately ftdetect directory seems not take effect in pathogen, I’m still wondering about why, but anyway here is a temporary workaround for now:
+    $ mkdir -p ~/.vim/ftdetect
+    $ cd ~/.vim/ftdetect
+    $ ln -s ../bundle/vim-task/ftdetect/task.vim task.vim
+
+## Shortcut Key, Key Binding & Customization
+By default, I mapped Ctrl+Command+Enter for toggling task status, you can simply remap to what’s the most comfortable for you:
+
+    inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
+    noremap <silent> <buffer> <C-D-CR> :call Toggle_task_status()<CR>
+
+Note, if you find the key binding doesn’t work as expect, please make sure your vim instance was compiled with the +ruby feature.
+
+    $ vim --version | grep +ruby
+    -python3 +quickfix +reltime +rightleft +ruby +scrollbind +signs +smartindent
+
+## File Format & Syntax
+The Tasks grammar and commands by default apply to file todo.txt and files with the .task and .tasks extensions. You can customize this by editing ftdetect/task.vim:
+
+    autocmd BufNewFile,BufRead todo.txt,*.task,*.tasks  setfiletype task
+
+All the formats and syntax is similar with the [TextMate Tasks bundle](http://henrik.nyh.se/2007/08/tasks-bundle "TextMate Tasks Bundle"), I just quoted below for your references:
+
+>     Headers end with a colon (“:”).
+>     Pending (uncompleted) tasks start with a hyphen (“-”). Completed tasks start with a checkmark (“✓”).
+>     Headers and tasks can be indented for grouping/hierarchy, as seen in the screenshot above. 
+
+## Bug & Feedback
+Please report bugs and issues to github: <http://github.com/samsonw/vim-task/issues>, any feedback and suggestion is welcome and appreciated.
+
