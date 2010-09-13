@@ -23,7 +23,7 @@ For those guys who use [pathogen](http://github.com/tpope/vim-pathogen "pathogen
     $ cd ~/.vim/bundle
     $ git clone git://github.com/samsonw/vim-task.git
 
-unfortunately ftdetect directory seems not take effect in pathogen, I’m still wondering about why, but anyway here is a temporary workaround for now:
+unfortunately ftdetect directory seems not take effect in [pathogen](http://github.com/tpope/vim-pathogen "pathogen"), I’m still wondering about why, but anyway here is a temporary workaround for now:
     $ mkdir -p ~/.vim/ftdetect
     $ cd ~/.vim/ftdetect
     $ ln -s ../bundle/vim-task/ftdetect/task.vim task.vim
