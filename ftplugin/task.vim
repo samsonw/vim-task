@@ -9,11 +9,13 @@ set cpo&vim
 
 
 function! Toggle_task_status()
-ruby << EOS
-  line = VIM::Buffer.current.line
-  line = line.gsub(/^(\s*)([-✓])/u) { $1 + ( $2 == '-' ? '✓' : '-' ) }
-  VIM::Buffer.current.line = line
-EOS
+  let line = getline('.')
+  if match(line, '^\(\s*\)-') == 0
+    let line = substitute(line, '^\(\s*\)-', '\1✓', '')
+  else
+    let line = substitute(line, '^\(\s*\)✓', '\1-', '')
+  endif
+  call setline('.', line)
 endfunction
 
 inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
