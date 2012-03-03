@@ -1,5 +1,6 @@
 ## Overview
 Basically, this is the [TextMate Tasks Bundle](http://henrik.nyh.se/2007/08/tasks-bundle "TextMate Tasks Bundle") port for Vim.
+This fork is made compatible with linux and pathogen.
 
 ## ScreenShot
 
@@ -23,16 +24,13 @@ For those guys who use [pathogen](http://github.com/tpope/vim-pathogen "pathogen
     $ cd ~/.vim/bundle
     $ git clone git://github.com/samsonw/vim-task.git
 
-unfortunately ftdetect directory seems not take effect in [pathogen](http://github.com/tpope/vim-pathogen "pathogen"), I’m still wondering about why, but anyway here is a temporary workaround for now:
-    $ mkdir -p ~/.vim/ftdetect
-    $ cd ~/.vim/ftdetect
-    $ ln -s ../bundle/vim-task/ftdetect/task.vim task.vim
-
 ## Shortcut Key, Key Binding & Customization
-By default, I mapped Ctrl+Command+Enter for toggling task status, you can simply remap to what’s the most comfortable for you:
+By default, I mapped Alt-z for toggling task status, you can simply remap to what’s the most comfortable for you:
 
-    inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
-    noremap <silent> <buffer> <C-D-CR> :call Toggle_task_status()<CR>
+	inoremap <silent> <buffer> <M-z> <ESC>:call Toggle_task_status()<CR>i
+	noremap <silent> <buffer> <M-z> :call Toggle_task_status()<CR>
+	inoremap <silent> <buffer> <M-Z> :call Toggle_task_status_remove()<CR>i
+	noremap <silent> <buffer> <M-Z> :call Toggle_task_status_remove()<CR>
 
 Note, if you find the key binding doesn’t work as expect, please make sure your vim instance was compiled with the +ruby feature.
 
