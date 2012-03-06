@@ -29,7 +29,8 @@ By default, I mapped Ctrl+Command+Enter for toggling task status, you can simply
     inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
     noremap <silent> <buffer> <C-D-CR> :call Toggle_task_status()<CR>
 
-Note, if you find the key binding doesn’t work as expect, please make sure your vim instance was compiled with the +ruby feature.
+~~Note, if you find the key binding doesn’t work as expect, please make sure your vim instance was compiled with the +ruby feature.~~
+Compiled with +ruby is not required any more, following +ruby check is optional since this plugin has already been ported to native vim script.
 
     $ vim --version | grep +ruby
     -python3 +quickfix +reltime +rightleft +ruby +scrollbind +signs +smartindent
