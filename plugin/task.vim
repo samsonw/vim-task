@@ -1,8 +1,8 @@
 " Boilerplate
-if (exists("b:did_ftplugin"))
+if (exists("g:loaded_task"))
   finish
 endif
-let b:did_ftplugin = 1
+let g:loaded_task = 1
 
 let s:cpo_save = &cpo
 set cpo&vim
