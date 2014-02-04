@@ -3,6 +3,9 @@ Basically, this is the [TextMate Tasks Bundle](http://henrik.nyh.se/2007/08/task
 
 ## ScreenShot
 
+### Vim-Task in Action
+<a href="http://blog.samsonis.me/wp-content/uploads/2014/02/vim-task.gif"><img style="border: medium none;" title="Vim-Task in Action" src="http://blog.samsonis.me/wp-content/uploads/2014/02/vim-task.gif" alt="Vim-Task in Action" width="300" height="216"></a>
+
 ### Vim-Task with Monaco font
 <a href="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task.png"><img style="border: medium none;" title="Vim-Task with Monaco font" src="http://blog.samsonis.me/wp-content/uploads/2010/09/vim-task.png" alt="Vim-Task with Monaco font" width="300" height="216"></a>
 
@@ -44,7 +47,7 @@ All the formats and syntax is similar with the [TextMate Tasks bundle](http://he
 
 >     Headers end with a colon (“:”).
 >     Pending (uncompleted) tasks start with a hyphen (“-”). Completed tasks start with a checkmark (“✓”).
->     Headers and tasks can be indented for grouping/hierarchy, as seen in the screenshot above. 
+>     Headers and tasks can be indented for grouping/hierarchy, as seen in the screenshot above.
 
 ## Bug & Feedback
 Please report bugs and issues to github: <http://github.com/samsonw/vim-task/issues>, any feedback and suggestion is welcome and appreciated.
